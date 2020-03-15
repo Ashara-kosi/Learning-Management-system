@@ -1,0 +1,29 @@
+<nav id="mobile-menu" style="display: block;">
+  <ul>
+    <li>
+      <a href="{% url 'home' %}">Home</a>
+    </li>
+    {% if user.is_authenticated %}
+      <li>
+        <a href="#about">PAGES</a>
+      </li>
+      <li>
+        <a href="#about">COURSES</a>
+      </li>
+      <li>
+        <a href="course_01.html">PROFILE</a>
+      </li>
+      <li>
+        <a href="{% url 'logout' %}">LOGOUT</a>
+      </li>
+    {% else %}
+      <li>
+        <a href="{% url 'login' %}">LOGIN</a>
+      </li>
+    {% endif %}
+    
+    <li>
+      <a href="contact_us.html">CONTACT</a>
+    </li>
+  </ul>
+</nav>
